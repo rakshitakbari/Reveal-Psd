@@ -1,0 +1,176 @@
+.header-section{
+    background: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    display: flex;
+    .contact-info-social{
+        @include media-breakpoint-down(sm){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .social-links{
+                margin-top: 20px;
+            }
+        }
+    }
+    .contact-info{
+        i{
+            color: $theme-color;
+            padding: 4px;
+        }
+        a{
+            line-height: 1;
+            color: #555;
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: none;
+            &:hover{
+                color: $theme-color;
+                transition: 0.5s;
+            }
+        }
+        .fa-phone {
+            padding-left: 20px;
+            margin-left: 20px;
+            border-left: 1px solid #e9e9e9;
+        }
+    }
+    .social-links{
+        a{
+            color: #555;
+            padding: 4px 12px;
+            display: inline-block;
+            line-height: 1px;
+            border-left: 1px solid #e9e9e9;
+            transition: 0.5s;
+            text-decoration: none;
+            i{
+                color: #555;
+                transition: 0.5s;
+                &:hover{
+                    color: $theme-color;
+                    transition: 0.5s;
+                }
+            }
+            &:first-child {
+                border-left: 0;
+            }
+        }    
+    }
+}
+header{
+    .navbar{
+        display: block;
+    }
+    .navbar-brand{
+        text-transform: capitalize;
+        color: #0c2e8a;
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 1;
+        display: inline-block;
+        transition: 0.5s;
+        span{
+            color: $theme-color;
+        }
+    }
+    .navbar-toggler-icon{
+        margin-top: 10px;
+    }
+    .navbar-collapse{
+        z-index: 1;
+        .navbar-nav{
+            @include media-breakpoint-down(sm){
+                background-color: $white;
+                -webkit-box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.15);
+                    li{
+                        margin-left: 20px;
+                        padding: 10px;
+                        a{
+                            color: $black !important;
+                        }
+                }
+            }
+        }    
+        ul{
+            li{
+                display: flex;
+                align-items: center;
+                margin-left: 15px;
+                margin-right: 15px;
+                padding: 10px 0;
+                a{
+                    padding: 10px 8px;
+                    text-decoration: none;
+                    display: inline-block;
+                    color: #555;
+                    font-family: "Raleway",sans-serif;
+                    font-weight: 700;
+                    font-size: 14px;
+                    outline: none;
+                    transition: all 0.4s ease-in-out;
+                    text-decoration: none;
+                    &:hover{
+                        color: $theme-color;
+                        transition: all 0.4s ease-in-out;
+                    }
+                    @include media-breakpoint-down(md){
+                        font-size: 9px;
+                    }
+                    @include media-breakpoint-down(sm){
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 0 !important;
+                    } 
+                    &.active{
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+    .fixed-header{
+        background-color: $white;
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 20;
+        .navbar-brand{
+            color: $black !important;
+        }
+        ul{
+            li{
+                a{
+                    color: $black;
+                    transition: .3 all ease-in-out;
+                    &:hover{
+                        color: $theme-color;
+                        transition: .3 all ease-in-out;
+                    }
+                }
+            }
+        }
+        // .navbar-nav{
+        //     .active{
+        //         color: $theme-color !important;
+        //     }
+        // }
+        .functional-buttons{
+            ul{
+                li{
+                    &:first-child a {
+                        border: 2px solid $theme-color !important;
+                        color: $theme-color !important;
+                    }
+                }
+            }  
+            .navbar-toggler{
+                border: 2px solid $theme-color;
+            }      
+        }
+    }
+}

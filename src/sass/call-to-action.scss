@@ -1,0 +1,40 @@
+#call-to-action{
+    background: #081e5b;
+    background-size: cover;
+    padding: 40px 16px;
+    margin-bottom: 80px;
+    .call-to-action-heading{
+        h3{
+            color: $white;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            padding: 0;
+        }
+        p{
+            color: $white;
+            padding: 0;
+            margin: 0 0 30px 0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+    }
+    .cta-btn-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .cta-btn {
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 8px 26px;
+            border-radius: 3px;
+            transition: 0.5s;
+            margin: 10px;
+            border: 3px solid $white;
+            color: $white;
+        }
+    }
+}
